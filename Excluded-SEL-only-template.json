@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Tamtaro Complete Setup",
-    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL v2.5.1. Designed for those who want high-quality results with minimal clutter. \"Complete Setup\" template comes with preconfigured streaming addons and formatter. \"Setup Without Addons/Formatter\" template will not overwrite current addons/formatter. \nNeither template will overwrite current debrid credentials (click Skip) or proxy settings. For catalogs, refer to my AIOMetadata config over Discord.",
+    "name": "Tamtaro Excluded SEL Only",
+    "description": "This template imports only the excluded stream expressions (SEL v2.5.1). Designed for those who want high-quality results with minimal clutter. Will not overwrite anything else in your current AIOStreaams. Just click Skip debrid credentials screen during Template Import.",
     "author": "Tamtaro",
     "category": "Debrid/Usenet/P2P",
     "serviceRequired": false
@@ -13,4 +13,5 @@
       "merge( count(resolution(quality(streams,'WEBRip'),'2160p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'2160p'), 3) : [],  count(resolution(quality(streams,'WEBRip'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'1440p','1080p'), 3) : [],  count(resolution(quality(streams,'WEBRip'),'720p','Unknown')) > 1 ?  slice(resolution(quality(streams,'WEBRip'),'720p','Unknown'), 1) : [],  count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p')) > 3 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'), 3) : [],  count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'), 1) : [],  count(resolution(quality(streams,'Unknown'),'2160p')) > 1 ? slice(resolution(quality(streams,'Unknown'),'2160p'), 1) : [],  count(resolution(quality(streams,'Unknown'),'1440p','1080p')) > 1 ? slice(resolution(quality(streams,'Unknown'),'1440p','1080p'), 1) : [],  count(resolution(quality(streams,'Unknown'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'Unknown'),'720p','Unknown'), 1) : [],  count(quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip')) > 5 ? quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV', 'CAM','TS','TC','SCR','Unknown'): count(quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip','HDRip','HC HD-Rip','DVDRip','HDTV')) > 5 ? quality(streams,'CAM','TS','TC','SCR','Unknown') : [],  count(negate(regexMatched(cached(streams), 'Bad'), regexMatched(cached(streams)))) >= 5 ? regexMatched(streams,'Bad') : [] )"
     ]
   }
+
 }
