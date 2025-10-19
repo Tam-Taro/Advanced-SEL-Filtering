@@ -2,7 +2,7 @@
   "metadata": {
     "id": "tamtaro.complete",
     "name": "Complete SEL Setup",
-    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those who want high-quality results with minimal clutter. *tamtaro.complete* also comes with addons and a custom formatter. For catalogs, refer to my AIOMetadata configs on the prev link.\n\n**Note:** * After importing, review the Language filter. Add any additional language you may be watching into both *Required* and *Preferred* fields. \n\n * Recommend to import Vidhin's regex patterns to highlight streams from reputable release groups.\n\n",
+    "description": "   Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those who want high-quality results with minimal clutter. \n\n * Comes with addons and a custom formatter\n * For catalogs, refer to my AIOMetadata configs on the prev link\n * After importing, review the Language filter. Add any additional language you may be watching into both *Required* and *Preferred* fields. \n * Recommend to import Vidhin's regex patterns to highlight streams from reputable release groups.\n\n",
     "author": "Tamtaro",
     "version": "1.0.0",
     "category": "Debrid/Usenet",
