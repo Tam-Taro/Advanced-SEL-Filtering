@@ -73,8 +73,8 @@ This is my recommended setup that should work for most of you. If you just want 
   - Generally the same as `Cached Sort Order` except Seeders is higher 
   - There should be very little to no uncached streams in your results (unless you're using usenet which are mostly uncached), therefore you don't need an exclusive list in this uncached sort order
 
-  > [!NOTE]
-  > If your first filter in `Global Sort Order` is `Cached` and you left `Cached/Uncached Sort Order` blank, your sort/filter may not work properly.
+> [!NOTE]
+> If your first filter in `Global Sort Order` is `Cached` and you left `Cached/Uncached Sort Order` blank, your sort/filter may not work properly.
 
 ## **Filtering**
 - Define `Preferrence Order` in each of `Resolution, Quality, Encode, Stream Type, Visual Tag, Audio Tag` and `Language`. 
