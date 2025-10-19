@@ -1,9 +1,11 @@
 {
   "metadata": {
-    "name": "Tamtaro Complete Setup",
-    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL v2.5.1. Designed for those who want high-quality results with minimal clutter. \"Complete Setup\" template comes with preconfigured streaming addons and formatter. \"Setup Without Addons/Formatter\" template will not overwrite current addons/formatter. \nNeither template will overwrite current debrid credentials (click Skip) or proxy settings. For catalogs, refer to my AIOMetadata config over Discord.",
+    "id": "tamtaro.complete",
+    "name": "Complete SEL Setup",
+    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those who want high-quality results with minimal clutter. *tam.complete* also comes with addons and a custom formatter. For catalogs, refer to my AIOMetadata configs on the prev link.\n\n**Note:** * After importing, review the Language filter to ensure they align with your preferences.\n\n**Enjoy cleaner, better-organized streaming results!**",
     "author": "Tamtaro",
-    "category": "Debrid/Usenet/P2P",
+    "version": "1.0.0",
+    "category": "Debrid/Usenet",
     "serviceRequired": false
   },
   "config": {
