@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "Tamtaro Complete Setup",
-    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL v2.5.1. Designed for those who want high-quality results with minimal clutter. \"Complete Setup\" template comes with preconfigured streaming addons and formatter. \"Setup Without Addons/Formatter\" template will not overwrite current addons/formatter. \nNeither template will overwrite current debrid credentials (click Skip) or proxy settings. For catalogs, refer to my AIOMetadata config over Discord.",
+    "name": "Tamtaro Setup without Addons",
+    "description": "Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL v2.5.1. Designed for those who want high-quality results with minimal clutter. This template will not overwrite current addons, debrid credentials (click Skip debrid credentials screen during Template Import) or proxy settings. For catalogs, refer to my AIOMetadata config over Discord.",
     "author": "Tamtaro",
     "category": "Debrid/Usenet/P2P",
     "serviceRequired": false
@@ -335,4 +335,5 @@
     "tvdbApiKey": "<optional_template_placeholder>",
     "tmdbApiKey": "<optional_template_placeholder>"
   }
+
 }
