@@ -3,15 +3,17 @@ Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetunin
 
 ---
 
-## ⚙️ What’s Included
+## ⚙️ What’s Included for AIOStreams
 
-| Template | Description |
-|-----------|--------------|
-| **Complete Setup** | Complete configuration with filters, sort orders, streaming addons, and formatter. |
-| **Without Addons** | Keeps your existing add-ons while applying the complete setup config. |
-| **Without Addons & Formatter** | Applies SEL sorting/filtering only. Keeps both your add-ons and formatter. |
-| **SEL Only** | Imports only the Excluded Stream Expressions (smart filters). |
-| **Formatter Only** | Imports only the custom formatter used in the template for stream display. |
+These are setup templates to use with AIOStreams. If you're not sure which AIOStreams instance to start with, check out the list of trusted public instances [here](https://status.dinsden.top/status/stremio-addons). The ones from midnight, yeb or Viren are solid choices.
+
+| Template | Description | Download |
+|-----------|--------------|-----------|
+| **Complete Setup** | Complete configuration with filters, sort orders, streaming addons, and formatter. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Complete-setup-template.json) |
+| **Without Addons** | Keeps your existing add-ons while applying the complete setup config. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-template.json) |
+| **Without Addons & Formatter** | Applies SEL sorting/filtering only. Keeps both your add-ons and formatter. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-or-formatter-template.json) |
+| **SEL Only** | Imports only the Excluded Stream Expressions (smart filters). | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Excluded-SEL-only-template.json) |
+| **Formatter Only** | Imports only the custom formatter used in the template for stream display. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Formatter-only-template.json) |
 
 ---
 
@@ -20,22 +22,36 @@ Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetunin
 1. **AIOStreams → Save & Install 💾 → Import** 
 2. Click **Import Template**
 3. Paste the URL of the template you want to import:
-
-```text
-https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Complete-setup-template.json
-```
-```text
-https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-template.json
-```
-```text
-https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-or-formatter-template.json
-```
-```text
-https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Excluded-SEL-only-template.json
-```
-```text
-https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Formatter-only-template.json
-```
+        <details>
+            <summary>Complete Setup</summary>
+  
+          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Complete-setup-template.json
+          
+     </details>
+        <details>
+            <summary>Complete Setup Without Addons</summary>
+      
+          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-template.json
+          
+     </details>
+        <details>
+            <summary>Complete Setup Without Addons or Formatter</summary>
+      
+          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-or-formatter-template.json
+          
+     </details>
+        <details>
+            <summary>SEL Only</summary>
+      
+          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Excluded-SEL-only-template.json
+          
+     </details>
+        <details>
+            <summary>Formatter Only</summary>
+      
+          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Formatter-only-template.json
+          
+     </details>
 4. Configure your debrid credentials (optional). If you already configured inside AIOStreams, you can skip.
 5. Enter your TMDB credentials for Title Matching feature. TMDB/TVDB APIs are optional.
 6. Load Template
@@ -45,8 +61,6 @@ https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Format
 
 ## 🧩 Recommended Setup
 This is my recommended setup that should work for most of you. If you just want a finished template, then import the aiostreams json linked above. Otherwise read on to customize your current aiostreams instance.
-
-If you're not sure which AIOStreams instance to use, check out [the list of trusted public instances here.](https://status.dinsden.top/status/stremio-addons)
 
 ### **Sorting**
 - __Global Sort Order Type:__  `Cached`
@@ -86,3 +100,89 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
 
 > [!IMPORTANT]
 > Leave all remainder filters setting, `Excluded` `Included` and `Required` boxes empty. As tempting as it sounds to select `Exclude Uncached` or set your `Result Limits`, my SEL will do that for you. This is the first troubleshooting step if your sort/filter looks off!
+
+### **Filtering with Stream Expression Language (SEL)**
+
+- All filtering (besides title match and dedupe) can be done with stream expressions
+- There are two schools of thought with regards to SEL Filtering:
+  - using it to filter during fetching stage via `Dynamic Group Exit Condition` or,
+  - using it after all initial filtering has been done by AIOStreams via  `Excluded Stream Expressions` (ESE) 
+- My setup has been fine-tuned using the second method for over 3 months now with feedback from users. I may incorporate the first method into my setup in the future, however for now heavy work of filtering is done using my three lines of ESE. Copy-paste the codes below into `AIOStreams -> Excluded Stream Expressions` or import them using the SEL-only template json at the top of this page.
+  <p>
+    <details>
+        <summary>First line into ESE: Core Filters & Low-res fallback</summary>
+  
+    ```text
+        count(type(streams, 'debrid', 'usenet')) > 0? (
+        count(type(cached(streams), 'debrid','usenet')) < 5 ? [] :
+        merge(count(regexMatched(streams)) > 0 ? seeders(merge(regexMatched(negate(uncached(type(streams, 'usenet')),uncached(streams)), '', 'Bad'), type(streams, 'p2p')), 0,10):seeders(merge(negate(uncached(type(streams, 'usenet')),uncached(streams)), type(streams, 'p2p')), 0,10),
+        count(resolution(cached(streams), '2160p','1440p')) > 10 ? resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown') :
+        count(resolution(cached(streams), '2160p','1440p','1080p')) > 10 ? slice(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 10) : 
+        count(resolution(cached(streams), '2160p','1440p','1080p','720p')) > 10 ? slice(resolution(streams, '576p','480p','360p','240p','144p','Unknown'), 5) : [])
+        ):
+        count(type(streams, 'p2p','http')) < 5 ? [] :
+        merge(count(seeders(type(streams, 'p2p'), 10))> 5? seeders(type(streams, 'p2p'), 0,10):[],
+        count(resolution(streams, '2160p','1440p')) > 10 ? resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown') :
+        count(resolution(streams, '2160p','1440p','1080p')) > 10 ? slice(resolution(streams, '720p','576p','480p','360p','240p','144p','Unknown'), 10) : 
+        count(resolution(streams, '2160p','1440p','1080p','720p')) > 10 ? slice(resolution(streams, '576p','480p','360p','240p','144p','Unknown'), 5) : [])
+     ```   
+    </details>
+  </p>
+  <p>
+    <details>
+        <summary>Second line into ESE: Trimming high quality streams (Bluray REMUX, Bluray, WEB-DL)</summary>
+  
+    ```text
+        merge(
+        count(resolution(quality(streams,'Bluray REMUX'),'2160p')) > 3 ? slice(resolution(quality(streams,'Bluray REMUX'),'2160p'), 3) : [],
+        count(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'Bluray REMUX'),'1440p','1080p'), 3) : [],
+        count(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'Bluray REMUX'),'720p','Unknown'), 1) : [],
+        count(resolution(quality(streams,'Bluray'),'2160p')) > 3 ? slice(resolution(quality(streams,'Bluray'),'2160p'), 3) : [],
+        count(resolution(quality(streams,'Bluray'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'Bluray'),'1440p','1080p'), 3) : [],
+        count(resolution(quality(streams,'Bluray'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'Bluray'),'720p','Unknown'), 1) : [],
+        count(resolution(quality(streams,'WEB-DL'),'2160p')) > 3 ? slice(resolution(quality(streams,'WEB-DL'),'2160p'), 3) : [],
+        count(resolution(quality(streams,'WEB-DL'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'WEB-DL'),'1440p','1080p'), 3) : [],
+        count(resolution(quality(streams,'WEB-DL'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'WEB-DL'),'720p','Unknown'), 1) : []
+        )
+    ```
+    </details>
+  </p>
+  <p>
+    <details>
+        <summary>Third line into ESE: Trimming low quality streams</summary>
+  
+    ```text
+        merge(
+        count(resolution(quality(streams,'WEBRip'),'2160p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'2160p'), 3) : [],
+        count(resolution(quality(streams,'WEBRip'),'1440p','1080p')) > 3 ? slice(resolution(quality(streams,'WEBRip'),'1440p','1080p'), 3) : [],
+        count(resolution(quality(streams,'WEBRip'),'720p','Unknown')) > 1 ?  slice(resolution(quality(streams,'WEBRip'),'720p','Unknown'), 1) : [],
+        count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p')) > 3 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'1080p'), 3) :[],
+        count(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV'),'720p','Unknown'), 1) : [],
+        count(resolution(quality(streams,'Unknown'),'2160p')) > 1 ? slice(resolution(quality(streams,'Unknown'),'2160p'), 1) : [],
+        count(resolution(quality(streams,'Unknown'),'1440p','1080p')) > 1 ? slice(resolution(quality(streams,'Unknown'),'1440p','1080p'), 1) : [],
+        count(resolution(quality(streams,'Unknown'),'720p','Unknown')) > 1 ? slice(resolution(quality(streams,'Unknown'),'720p','Unknown'), 1) : [],
+        count(quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip')) > 5 ? quality(streams,'HDRip','HC HD-Rip','DVDRip','HDTV', 'CAM','TS','TC','SCR','Unknown'): count(quality(streams,'Bluray REMUX','Bluray','WEB-DL','WEBRip','HDRip','HC HD-Rip','DVDRip','HDTV')) > 5 ? quality(streams,'CAM','TS','TC','SCR','Unknown') : [],
+        count(negate(regexMatched(cached(streams), 'Bad'), regexMatched(cached(streams)))) >= 5 ? regexMatched(streams,'Bad') : []
+        )
+    ```
+    </details>
+  </p>
+
+## ⚙️ What’s Included for AIOMetadata
+These are setup configs to use with AIOMetadata. It is a powerful tool for all things metadata and catalogs. If you're not sure where to start, pick a AIOMetadata instance from [the list of trusted public instances](https://status.dinsden.top/status/stremio-addons) or use the [Elfhosted instance](https://aiometadata.elfhosted.com/configure/). You can't go wrong with either choice.
+
+| Complete config | Description |Download|
+|-----------|--------------|---|
+| **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs.|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-with-anime.json)|
+| **Without Anime Catalogs** | omplete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-without-anime.json)|
+
+## 📦 How to Import
+AIOMetadata setup configuration [For Meta/Catalogs]
+
+- Pick one of these two json files to import into AIOMetadata following the instructions below:
+
+   1. Integrations tab -> Obtain and enter your TMDB, TVDB, and MDBLists APIs . Use `t0-free-rpdb` for RPDB. Fanart.tv API Key is optional. Hit the `Test All Keys` button to ensure they're all ️:white_check_mark:.
+   2. Configuration tab -> Import Configuration -> Import one of my json files. Feel free to edit/hide/delete various catalogs in Catalogs tab to your liking.
+   3. Configuration tab -> Save Configuration -> Enter a password to save your configuration (if you haven't made an account before) -> Install the addon directly into Stremio. Note: if you encounter `AddonsPushedToAPI - Max descriptor size reached` error, try step
+   4. Copy your `Install URL`. Go to [Stremthru Side Kick](https://stremthru.elfhosted.com/stremio/sidekick/), log in there using your stremio account and use the Install button there to install the addon with the AIOMetadata URL. This *may help to* bypass the `AddonsPushedToAPI - Max descriptor size reached` error, otherwise disable some catalogs to reduce size. 
+- For best compatibility with AIOMetadata, go to https://cinebye.dinsden.top, load up your account and remove all three Cinemeta features (Search, Catalogs, and Meta). Then scroll down to the bottom of cinebye and re-order your addons so that AIOMetadata is top spot.  Finally, save the changes by clicking `Sync to Stremio`.
