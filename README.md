@@ -56,11 +56,11 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 5. Enter your TMDB credentials for Title Matching feature. TMDB/TVDB APIs are optional.
 6. Load Template
 
-> [!NOTE]
-> Personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain the language you want.
+  > [!NOTE]
+  > Personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain the language you want.
 
 ## 🧩 Recommended Setup
-This is my recommended setup that should work for most of you. If you just want a finished template, then import the aiostreams json linked above. Otherwise read on to customize your current aiostreams instance.
+This is my recommended setup that should work for most of you. If you just want a finished template, then import the AIOStreams json linked above. Otherwise read on to customize your current AIOStreams instance.
 
 ### **Sorting**
 - __Global Sort Order Type:__  `Cached`
@@ -73,8 +73,8 @@ This is my recommended setup that should work for most of you. If you just want 
   - Generally the same as `Cached Sort Order` except Seeders is higher 
   - There should be very little to no uncached streams in your results (unless you're using usenet which are mostly uncached), therefore you don't need an exclusive list in this uncached sort order
 
-> [!NOTE]
-> If your first filter in `Global Sort Order` is `Cached` and you left `Cached/Uncached Sort Order` blank, your sort/filter may not work properly.
+  > [!NOTE]
+  > If your first filter in `Global Sort Order` is `Cached` and you left `Cached/Uncached Sort Order` blank, your sort/filter may not work properly.
 
 ## **Filtering**
 - Define `Preferrence Order` in each of `Resolution, Quality, Encode, Stream Type, Visual Tag, Audio Tag` and `Language`. 
