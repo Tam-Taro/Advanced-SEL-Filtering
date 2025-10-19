@@ -101,7 +101,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
 > [!IMPORTANT]
 > Leave all remainder filters setting, `Excluded` `Included` and `Required` boxes empty. As tempting as it sounds to select `Exclude Uncached` or set your `Result Limits`, my SEL will do that for you. This is the first troubleshooting step if your sort/filter looks off!
 
-### **Filtering with Stream Expression Language (SEL)**
+## **Filtering with Stream Expression Language (SEL)**
 
 - All filtering (besides title match and dedupe) can be done with stream expressions
 - There are two schools of thought with regards to SEL Filtering:
@@ -167,6 +167,8 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
     ```
     </details>
   </p>
+
+---
 
 ## ⚙️ What’s Included for AIOMetadata
 These are setup configs to use with AIOMetadata. It is a powerful tool for all things metadata and catalogs. If you're not sure where to start, pick a AIOMetadata instance from [the list of trusted public instances](https://status.dinsden.top/status/stremio-addons) or use the [Elfhosted instance](https://aiometadata.elfhosted.com/configure/). You can't go wrong with either choice.
