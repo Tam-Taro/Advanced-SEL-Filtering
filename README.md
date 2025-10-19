@@ -57,7 +57,7 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 6. Load Template
 
 > [!NOTE]
-> Personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank them according at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain the language you want.
+> Personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain the language you want.
 
 ## 🧩 Recommended Setup
 This is my recommended setup that should work for most of you. If you just want a finished template, then import the aiostreams json linked above. Otherwise read on to customize your current aiostreams instance.
