@@ -2,7 +2,7 @@
   "metadata": {
     "id": "tamtaro.complete",
     "name": "Complete SEL Setup",
-    "description": "   Fully configured AIOStreams setup based on my recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those who want high-quality results with minimal clutter. \n\n * Comes with addons and formatter. If desired, use my other templates for no addons/formatter override\n * For catalogs, refer to my AIOMetadata configs in the guide\n * **ⓘ Review the Language filter**. Add additional language you may be watching into both *Required* and *Preferred* fields. \n * Recommend to import [Vidhin's regex patterns](https://github.com/Vidhin05/Releases-Regex/tree/main?tab=readme-ov-file#-raw-github-links-for-direct-import) to highlight streams from reputable release groups.\n\n",
+    "description": "   Fully configured setup based on Tamtaro's recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those who seek the highest quality results, minimal clutter, and complete coverage even when options are few. \n\n * Comes with addons and formatter. If desired, use my other templates for no addons/formatter override\n * For catalogs, refer to my AIOMetadata configs in the guide\n * **ⓘ Review the Language filter**. Add additional language you may be watching into both *Required* and *Preferred* fields. \n * Recommend to import [Vidhin's regex](https://github.com/Vidhin05/Releases-Regex/tree/main?tab=readme-ov-file#-raw-github-links-for-direct-import) into *Preferred Regex Patterns* to highlight streams from reputable release groups.\n\n",
     "author": "Tamtaro",
     "version": "1.0.0",
     "category": "Debrid/Usenet",
