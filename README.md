@@ -26,7 +26,7 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 ```text
 https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/Tamtaro-All-Templates-for-AIOStreams.json
 ```
-4. "Confirm Import" to import all templates available from me. If you already imported previously, this will refresh them to the latest version. 
+4. "Confirm Import" to import all templates available from me.  This will save them into your browser cache for future use. If you already imported previously, this will refresh them to the latest version. 
 5. Select one of the templates as you wish to use. I recommend to start with "Complete SEL Setup" as it has the most of my configs shared here.
 6. Follow the prompt to configure your debrid credentials (optional if you chose the P2P template). API Keys already configured inside AIOStreams will be prefilled.
 7. Enter your TMDB/TVDB credentials for Title Matching and various other features. Use `t0-free-rpdb` for RPDB key.
