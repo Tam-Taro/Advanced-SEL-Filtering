@@ -1,5 +1,7 @@
 # SEL-Filtering-and-Sorting
-Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
+Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
+
+You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
 
 ---
 
