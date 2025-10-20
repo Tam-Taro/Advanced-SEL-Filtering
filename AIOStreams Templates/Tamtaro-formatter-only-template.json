@@ -1,16 +1,19 @@
 {
   "metadata": {
-    "name": "Formatter Only",
-    "description": "This template imports only the formatter used in the setup template. Will not overwrite anything else in your current AIOStreaams. Just click Skip debrid credentials screen during Template Import.",
+    "id": "tamtaro.formatter-only",
+    "name": "Formatter Only Template",
+    "description": "This template will import only the formatter used in my SEL setup, nothing else will be affected. The formatter is minimal and clean, without flashy coloured emojis, while comprehensive enough to display all necessary information for stream selection. Intended to complement my SEL setup, with emphasis on resolution, stream type and quality front and center in the title section.",
+    "source": "external",
     "author": "Tamtaro",
-    "category": "Debrid/Usenet/P2P",
+    "version": "1.0.0",
+    "category": "Formatter",
     "serviceRequired": false
   },
   "config": {
     "formatter": {
       "id": "custom",
       "definition": {
-        "name": "  {stream.resolution::=2160p[\"𝟒𝐊\"||\"\"]}{stream.resolution::=1440p[\"𝟐𝐊\"||\"\"]}{stream.resolution::=1080p[\"𝟏𝟎𝟖𝟎𝐏\"||\"\"]}{stream.resolution::=720p[\"𝟕𝟐𝟎𝐏\"||\"\"]}{stream.resolution::=576p[\"𝟓𝟕𝟔𝐏\"||\"\"]}{stream.resolution::=540p[\"𝟓𝟒𝟎𝐏\"||\"\"]}{stream.resolution::=480p[\"𝟒𝟖𝟎𝐏\"||\"\"]}{stream.resolution::=360p[\"𝟑𝟔𝟎𝐏\"||\"\"]}{stream.resolution::=240p[\"𝟐𝟒𝟎𝐏 \"||\"\"]}{stream.resolution::=144p[\"𝟏𝟒𝟒𝐏\"||\"\"]} {stream.type::replace('debrid',' ')::replace('p2p','⁽ᵖ²ᵖ⁾')::replace('live','⁽ˡᶦᵛᵉ⁾')::replace('http','⁽ʷᵉᵇ ˢᵗʳᵉᵃᵐ⁾')::replace('usenet','⁽ᵘˢᵉⁿᵉᵗ⁾')::replace('statistic','⁽ˢᵗᵃᵗˢ⁾')::replace('external','⁽ᵉˣᵗᵉʳⁿᵃˡ⁾')::replace('error','⁽ᵉʳʳᵒʳ⁾')::replace('youtube','⁽ʸᵒᵘᵗᵘᵇᵉ⁾')}{service.cached::istrue[\"⚡\"||\"\"]}{service.cached::isfalse[\"⏳\"||\"\"]}      \n{stream.quality::exists[\"「{stream.quality::title}」\"||\"\"]}",
+        "name": "  {stream.resolution::=2160p[\"𝟒𝐊\"||\"\"]}{stream.resolution::=1440p[\"𝟐𝐊\"||\"\"]}{stream.resolution::=1080p[\"𝟏𝟎𝟖𝟎𝐏\"||\"\"]}{stream.resolution::=720p[\"𝟕𝟐𝟎𝐏\"||\"\"]}{stream.resolution::=576p[\"𝟓𝟕𝟔𝐏\"||\"\"]}{stream.resolution::=540p[\"𝟓𝟒𝟎𝐏\"||\"\"]}{stream.resolution::=480p[\"𝟒𝟖𝟎𝐏\"||\"\"]}{stream.resolution::=360p[\"𝟑𝟔𝟎𝐏\"||\"\"]}{stream.resolution::=240p[\"𝟐𝟒𝟎𝐏 \"||\"\"]}{stream.resolution::=144p[\"𝟏𝟒𝟒𝐏\"||\"\"]} {stream.type::replace('debrid',' ')::replace('p2p','⁽ᵖ²ᵖ⁾')::replace('live','⁽ˡᶦᵛᵉ⁾')::replace('http','⁽ʷᵉᵇ⁾')::replace('usenet','⁽ᵘˢᵉⁿᵉᵗ⁾')::replace('statistic','⁽ˢᵗᵃᵗˢ⁾')::replace('external','⁽ᵉˣᵗᵉʳⁿᵃˡ⁾')::replace('error','⁽ᵉʳʳᵒʳ⁾')::replace('youtube','⁽ʸᵒᵘᵗᵘᵇᵉ⁾')}{service.cached::istrue[\"⚡\"||\"\"]}{service.cached::isfalse[\"⏳\"||\"\"]}      \n{stream.quality::exists[\"「{stream.quality::title}」\"||\"\"]}",
         "description": "{stream.title::exists::and::stream.library::isfalse[\"✎ {stream.title}\"||\"\"]}{stream.title::exists::and::stream.library::istrue[\"☁︎  {stream.title}\"||\"\"]}{stream.year::exists[\" ({stream.year})\"||\"\"]} {stream.season::>=0[\" S\"||\"\"]}{stream.season::<=9[\"0\"||\"\"]}{stream.season::>0[\"{stream.season}\"||\"\"]}{stream.episode::>=0[\" · E\"||\"\"]}{stream.episode::<=9[\"0\"||\"\"]}{stream.episode::>0[\"{stream.episode}\"||\"\"]}\n{stream.encode::exists[\"▣  {stream.encode} \"||\"\"]}{stream.visualTags::exists[\"✧  {stream.visualTags::join(' · ')} \"||\"\"]}\n{stream.audioTags::exists[\"♬  {stream.audioTags::join(' · ')} \"||\"\"]}{stream.audioChannels::exists[\" ☊  {stream.audioChannels::join(' · ')}\"||\"\"]}\n{stream.size::>0[\"◧  {stream.size::bytes} \"||\"\"]}{stream.folderSize::>0[\"/ {stream.folderSize::bytes}\"||\"\"]}{service.cached::isfalse::or::stream.type::=p2p::and::stream.seeders::>0[\" ⇋ {stream.seeders}𖧧 \"||\"\"]}{stream.duration::>0[\" · {stream.duration::time}\"||\"\"]}{stream.type::=usenet::and::stream.age::exists[\" · {stream.age} \"||\"\"]}{stream.languages::exists[\" · ⚐ {stream.smallLanguageCodes::join(' · ')::replace('ᴅᴜᴀʟ ᴀᴜᴅɪᴏ','ᴅᴜᴏ')::replace('ᴅᴜʙʙᴇᴅ','ᴅᴜʙ')}\"||\"\"]}\n{stream.proxied::istrue[\"🝰  \"||\"○  \"]}{service.shortName::exists[\"[{service.shortName}] \"||\"\"]}{addon.name}{stream.releaseGroup::exists[\" · {stream.releaseGroup}\"||\"\"]}{stream.indexer::exists::and::stream.type::=usenet[\" · {stream.indexer}\"||\"\"]}\n{stream.regexMatched::exists[\"»  {stream.regexMatched::Title}\"||\"\"]} {stream.message::exists[\"ⓘ  {stream.message}\"||\"\"]}"
       }
     }
