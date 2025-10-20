@@ -153,8 +153,8 @@ These are setup configs to use with AIOMetadata. It is a powerful tool for all t
 
 | Complete config | Description |Download|
 |-----------|--------------|---|
-| **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs.|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-with-anime.json)|
-| **Without Anime Catalogs** | omplete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-without-anime.json)|
+| **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs.|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata/AIOMetadata-config-with-anime.json)|
+| **Without Anime Catalogs** | omplete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata/AIOMetadata-config-without-anime.json)|
 
 ## 📦 How to Import
 AIOMetadata setup configuration [For Meta/Catalogs]
