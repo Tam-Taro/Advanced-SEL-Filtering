@@ -7,7 +7,7 @@ You can find my config for AIOMetadata at the end for all your metadata and cata
 
 ## ⚙️ What’s Included for AIOStreams
 
-These are setup templates to use with AIOStreams. If you're not sure which AIOStreams instance to start with, check out the list of trusted public instances [here](https://status.dinsden.top/status/stremio-addons). The ones from midnight, yeb or Viren are solid choices.
+These are setup templates to use with AIOStreams. If you're not sure which AIOStreams instance to start with, check out the list of trusted public instances [here](https://status.dinsden.top/status/stremio-addons).
 
 | Template | Description |
 |-----------|--------------|
