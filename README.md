@@ -1,5 +1,5 @@
 # SEL-Filtering-and-Sorting
-Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
+Since AIOStreams rewrite, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
 
 You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
 
@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/
   > Remember to personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain streams of your preferred languages.
 
 ## 🧩 Recommended Setup
-This is my recommended setup that should work for most of you. If you just want a finished template, then import the AIOStreams json linked above. Otherwise read on to customize your current AIOStreams instance.
+This is my recommended setup that should work for most of you. If you just want a finished template, then import & use one of the templates described above. Otherwise read on to customize your current AIOStreams instance.
 
 ### **Sorting**
 - __Global Sort Order Type:__  `Cached`
