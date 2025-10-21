@@ -24,7 +24,7 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 
 1. **AIOStreams → Save & Install 💾 → Import** 
 2. Click **Import Template**
-3. Paste the URL to "Tamtaro-All-Templates-for-AIOStreams"
+3. Copy & Paste the URL to "Tamtaro-All-Templates-for-AIOStreams"
 ```text
 https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/Tamtaro-All-Templates-for-AIOStreams.json
 ```
