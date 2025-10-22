@@ -1,5 +1,5 @@
 # SEL-Filtering-and-Sorting
-Since AIOStreams rewrite, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
+Since AIOStreams rewrite, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips for your own setup. You will find a guide to my personal config and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
 
 You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
 
@@ -13,8 +13,8 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 |-----------|--------------|
 | **Complete Setup** | Complete configuration with filters, sort orders, streaming addons, and formatter. |
 | **Without Addons** | Keeps your existing add-ons while applying the complete setup config. |
-| **Without Addons & Formatter** | Applies SEL sorting/filtering only. Keeps both your add-ons and formatter. |
-| **Complete Setup for P2P** | Complete setup, with p2p/http addons tailored for those without debrid service |
+| **Without Addons & Formatter** | Applies the complete set up but keeps both your add-ons and formatter untouched. |
+| **Complete Setup for P2P** | Complete setup, with p2p/http addons and sort order tailored for those without debrid service |
 | **SEL Only** | Imports only the Excluded Stream Expressions (smart filters). | 
 | **Formatter Only** | Imports only the custom formatter used in the template for stream display. |
 
