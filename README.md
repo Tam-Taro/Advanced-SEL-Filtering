@@ -1,19 +1,22 @@
 # SEL-Filtering-and-Sorting
-Since the rewrite of AIOStreams v2, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips to use in your own stremio setup. Here you will find a guide to my perosonal setup and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
+Since AIOStreams rewrite, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips for your own setup. You will find a guide to my personal config and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
+
+You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
 
 ---
 
 ## ⚙️ What’s Included for AIOStreams
 
-These are setup templates to use with AIOStreams. If you're not sure which AIOStreams instance to start with, check out the list of trusted public instances [here](https://status.dinsden.top/status/stremio-addons). The ones from midnight, yeb or Viren are solid choices.
+These are setup templates to use with AIOStreams. If you're not sure which AIOStreams instance to start with, check out the list of trusted public instances [here](https://status.dinsden.top/status/stremio-addons).
 
-| Template | Description | Download |
-|-----------|--------------|-----------|
-| **Complete Setup** | Complete configuration with filters, sort orders, streaming addons, and formatter. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Complete-setup-template.json) |
-| **Without Addons** | Keeps your existing add-ons while applying the complete setup config. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-template.json) |
-| **Without Addons & Formatter** | Applies SEL sorting/filtering only. Keeps both your add-ons and formatter. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-or-formatter-template.json) |
-| **SEL Only** | Imports only the Excluded Stream Expressions (smart filters). | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Excluded-SEL-only-template.json) |
-| **Formatter Only** | Imports only the custom formatter used in the template for stream display. | [Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Formatter-only-template.json) |
+| Template | Description |
+|-----------|--------------|
+| **Complete Setup** | Complete configuration with filters, sort orders, streaming addons, and formatter. |
+| **Without Addons** | Keeps your existing add-ons while applying the complete setup config. |
+| **Without Addons & Formatter** | Applies the complete set up but keeps both your add-ons and formatter untouched. |
+| **Complete Setup for P2P** | Complete setup, with p2p/http addons and sort order tailored for those without debrid service |
+| **SEL Only** | Imports only the Excluded Stream Expressions (smart filters). | 
+| **Formatter Only** | Imports only the custom formatter used in the template for stream display. |
 
 ---
 
@@ -21,46 +24,21 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 
 1. **AIOStreams → Save & Install 💾 → Import** 
 2. Click **Import Template**
-3. Paste the URL of the template you want to import:
-        <details>
-            <summary>Complete Setup</summary>
-  
-          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Complete-setup-template.json
-          
-     </details>
-        <details>
-            <summary>Complete Setup Without Addons</summary>
-      
-          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-template.json
-          
-     </details>
-        <details>
-            <summary>Complete Setup Without Addons or Formatter</summary>
-      
-          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Setup-without-addons-or-formatter-template.json
-          
-     </details>
-        <details>
-            <summary>SEL Only</summary>
-      
-          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Excluded-SEL-only-template.json
-          
-     </details>
-        <details>
-            <summary>Formatter Only</summary>
-      
-          https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/main/Formatter-only-template.json
-          
-     </details>
-4. Configure your debrid credentials (optional). If you already configured inside AIOStreams, you can skip.
-5. Enter your TMDB credentials for Title Matching feature. TMDB/TVDB APIs are optional.
-6. Load Template
+3. Copy & Paste the URL to "Tamtaro-All-Templates-for-AIOStreams"
+```text
+https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/Tamtaro-All-Templates-for-AIOStreams.json
+```
+4. "Confirm Import" to import all templates available from me.  This will save them into your browser cache for future use. If you already imported previously, this will refresh them to the latest version. 
+5. Select one of the templates as you wish to use. I recommend to start with "Complete SEL Setup" as it has the most of my configs shared here.
+6. Follow the prompt to configure your debrid credentials (optional if you chose the P2P template). API Keys already configured inside AIOStreams will be prefilled.
+7. Enter your TMDB/TVDB credentials for Title Matching and various other features. Use `t0-free-rpdb` for RPDB key.
+8. Load Template, Save your AIOStreams and enjoy!
 
   > [!NOTE]
-  > Personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain the language you want.
+  > Remember to personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain streams of your preferred languages.
 
 ## 🧩 Recommended Setup
-This is my recommended setup that should work for most of you. If you just want a finished template, then import the AIOStreams json linked above. Otherwise read on to customize your current AIOStreams instance.
+This is my recommended setup that should work for most of you. If you just want a finished template, then import & use one of the templates described above. Otherwise read on to customize your current AIOStreams instance.
 
 ### **Sorting**
 - __Global Sort Order Type:__  `Cached`
@@ -175,8 +153,8 @@ These are setup configs to use with AIOMetadata. It is a powerful tool for all t
 
 | Complete config | Description |Download|
 |-----------|--------------|---|
-| **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs.|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-with-anime.json)|
-| **Without Anime Catalogs** | omplete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata-config-without-anime.json)|
+| **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs. Huge props to Cedya, Snoak & Mr Professor for their awesome lists!|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-with-anime.json)|
+| **Without Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-without-anime.json)|
 
 ## 📦 How to Import
 AIOMetadata setup configuration [For Meta/Catalogs]
@@ -186,5 +164,5 @@ AIOMetadata setup configuration [For Meta/Catalogs]
    1. Integrations tab -> Obtain and enter your TMDB, TVDB, and MDBLists APIs . Use `t0-free-rpdb` for RPDB. Fanart.tv API Key is optional. Hit the `Test All Keys` button to ensure they're all ️:white_check_mark:.
    2. Configuration tab -> Import Configuration -> Import one of my json files. Feel free to edit/hide/delete various catalogs in Catalogs tab to your liking.
    3. Configuration tab -> Save Configuration -> Enter a password to save your configuration (if you haven't made an account before) -> Install the addon directly into Stremio. Note: if you encounter `AddonsPushedToAPI - Max descriptor size reached` error, try step
-   4. Copy your `Install URL`. Go to [Stremthru Side Kick](https://stremthru.elfhosted.com/stremio/sidekick/), log in there using your stremio account and use the Install button there to install the addon with the AIOMetadata URL. This *may help to* bypass the `AddonsPushedToAPI - Max descriptor size reached` error, otherwise disable some catalogs to reduce size. 
+   4. Copy your `Install URL`. Go to [Stremthru Side Kick](https://stremthru.13377001.xyz/stremio/sidekick/), log in there using your stremio account and use the Install button there to install the addon with the AIOMetadata URL. This *may help to* bypass the `AddonsPushedToAPI - Max descriptor size reached` error, otherwise disable some catalogs to reduce size. 
 - For best compatibility with AIOMetadata, go to https://cinebye.dinsden.top, load up your account and remove all three Cinemeta features (Search, Catalogs, and Meta). Then scroll down to the bottom of cinebye and re-order your addons so that AIOMetadata is top spot.  Finally, save the changes by clicking `Sync to Stremio`.
