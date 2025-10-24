@@ -1235,7 +1235,7 @@
       "description": "Fully configured setup for P2P users, based on Tamtaro's recommended filters, sort orders, and SEL described [here](https://github.com/Tam-Taro/SEL-Filtering-and-Sorting). Designed for those without a debrid service but still want the highest quality results, minimal clutter, and complete coverage even when options are few. \n\n * Comes with tailored sort order for non-debrid usage. \n * Preconfigured with both P2P and HTTP streaming addons, and formatter. \n * For catalogs, check out my github for AIOMetadata configs\n * **ⓘ Review the Language filter**: Add additional language you may be watching into both *Required* and *Preferred* fields. \n * I recommend importing [Vidhin's regex](https://github.com/Vidhin05/Releases-Regex/tree/main?tab=readme-ov-file#-raw-github-links-for-direct-import) into *Preferred Regex Patterns* to highlight streams from reputable release groups.",
       "source": "external",
       "author": "Tamtaro",
-      "version": "1.0.0",
+      "version": "1.0.0-02",
       "category": "P2P",
       "serviceRequired": false
     },
@@ -1715,14 +1715,14 @@
         ]
       },
       "statistics": {
-        "enabled": true,
+        "enabled": false,
         "position": "top",
         "statsToShow": [
           "addon",
           "filter"
         ]
       },
-      "hideErrorsForResources": [],
+      "hideErrorsForResources": ["stream"],
       "trusted": false,
       "excludedResolutions": [],
       "includedResolutions": [],
