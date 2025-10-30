@@ -1,6 +1,6 @@
 {
-  "version": "1.2.0",
-  "exportedAt": "2025-10-17T21:15:50.870Z",
+  "version": "1.5.0",
+  "exportedAt": "2025-10-30T21:43:19.982Z",
   "config": {
     "language": "en-US",
     "includeAdult": false,
@@ -8,6 +8,7 @@
     "showPrefix": false,
     "showMetaProviderAttribution": false,
     "castCount": 10,
+    "displayAgeRating": false,
     "sfw": true,
     "hideUnreleasedDigital": true,
     "providers": {
@@ -29,7 +30,7 @@
         "logo": "meta"
       },
       "anime": {
-        "poster": "mal",
+        "poster": "meta",
         "background": "imdb",
         "logo": "imdb"
       },
@@ -58,6 +59,58 @@
     "sessionId": "",
     "catalogs": [
       {
+        "id": "mdblist.88434",
+        "type": "series",
+        "name": "Trakt Trending",
+        "enabled": true,
+        "showInHome": true,
+        "source": "mdblist",
+        "sort": "default",
+        "order": "asc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "series"
+      },
+      {
+        "id": "mdblist.87667",
+        "type": "movie",
+        "name": "Trakt Trending",
+        "enabled": true,
+        "showInHome": true,
+        "source": "mdblist",
+        "sort": "default",
+        "order": "asc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.86710",
+        "type": "series",
+        "name": "Latest Airing",
+        "enabled": true,
+        "showInHome": true,
+        "source": "mdblist",
+        "sort": "last_air_date",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "series"
+      },
+      {
+        "id": "mdblist.86934",
+        "type": "movie",
+        "name": "Latest Digital Release",
+        "enabled": true,
+        "showInHome": true,
+        "source": "mdblist",
+        "sort": "releasedigital",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
         "id": "tmdb.trending",
         "name": "TMDB Trending",
         "type": "series",
@@ -66,7 +119,7 @@
         "showInHome": true,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tmdb.trending",
@@ -77,7 +130,7 @@
         "showInHome": true,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.top",
@@ -88,7 +141,7 @@
         "showInHome": true,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tmdb.top",
@@ -99,7 +152,7 @@
         "showInHome": true,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.year",
@@ -110,7 +163,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.year",
@@ -121,7 +174,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tmdb.language",
@@ -132,7 +185,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.language",
@@ -143,29 +196,29 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tvdb.trending",
         "name": "TVDB Trending",
         "type": "movie",
         "source": "tvdb",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tvdb.trending",
         "name": "TVDB Trending",
         "type": "series",
         "source": "tvdb",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tvdb.genres",
@@ -176,7 +229,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tvdb.genres",
@@ -187,7 +240,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tvdb.collections",
@@ -198,7 +251,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mal.airing",
@@ -213,12 +266,13 @@
       {
         "id": "custom.org_stremio_animecatalogs.anime.anilist_trending_now",
         "type": "anime",
-        "name": "AniList Trending Now",
+        "name": "Trending Now AniList",
         "enabled": true,
         "showInHome": true,
         "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anilist_trending-now.json",
+        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anilist_trending-now.json",
         "genres": [],
+        "cacheTTL": 40000,
         "manifestData": {
           "id": "anilist_trending-now",
           "type": "anime",
@@ -297,108 +351,18 @@
           "idPrefixes": [
             "kitsu:"
           ]
-        },
-        "displayType": "anime"
-      },
-      {
-        "id": "custom.org_stremio_animecatalogs.anime.anilist_popular_this_season",
-        "type": "anime",
-        "name": "AniList Popular This Season",
-        "enabled": true,
-        "showInHome": true,
-        "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anilist_popular-this-season.json",
-        "genres": [],
-        "manifestData": {
-          "id": "anilist_popular-this-season",
-          "type": "anime",
-          "name": "Popular This Season AniList",
-          "extra": [
-            {
-              "name": "genre",
-              "options": [
-                "Action",
-                "Adventure",
-                "Comedy",
-                "Drama",
-                "Sci-Fi",
-                "Space",
-                "Mystery",
-                "Magic",
-                "Supernatural",
-                "Police",
-                "Fantasy",
-                "Sports",
-                "Romance",
-                "Cars",
-                "Slice of Life",
-                "Racing",
-                "Horror",
-                "Psychological",
-                "Thriller",
-                "Martial Arts",
-                "Super Power",
-                "School",
-                "Ecchi",
-                "Vampire",
-                "Historical",
-                "Military",
-                "Dementia",
-                "Mecha",
-                "Demons",
-                "Samurai",
-                "Harem",
-                "Music",
-                "Parody",
-                "Shoujo Ai",
-                "Game",
-                "Shounen Ai",
-                "Kids",
-                "Hentai",
-                "Yuri",
-                "Yaoi",
-                "Anime Influenced",
-                "Gender Bender",
-                "Doujinshi",
-                "Mahou Shoujo",
-                "Mahou Shounen",
-                "Gore",
-                "Law",
-                "Cooking",
-                "Mature",
-                "Medical",
-                "Political",
-                "Tokusatsu",
-                "Youth",
-                "Workplace",
-                "Crime",
-                "Zombies",
-                "Documentary",
-                "Family",
-                "Food",
-                "Friendship",
-                "Tragedy"
-              ]
-            },
-            {
-              "name": "skip"
-            }
-          ],
-          "idPrefixes": [
-            "kitsu:"
-          ]
-        },
-        "displayType": "anime"
+        }
       },
       {
         "id": "custom.org_stremio_animecatalogs.anime.anidb_popular",
         "type": "anime",
-        "name": "AniDB Popular",
+        "name": "Popular AniDB",
         "enabled": true,
         "showInHome": true,
         "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anidb_popular.json",
+        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_popular.json",
         "genres": [],
+        "cacheTTL": 40000,
         "manifestData": {
           "id": "anidb_popular",
           "type": "anime",
@@ -477,18 +441,18 @@
           "idPrefixes": [
             "kitsu:"
           ]
-        },
-        "displayType": "anime"
+        }
       },
       {
         "id": "custom.org_stremio_animecatalogs.anime.anidb_latest_started",
         "type": "anime",
-        "name": "AniDB Latest Started",
+        "name": "Latest Started AniDB",
         "enabled": true,
         "showInHome": true,
         "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anidb_latest-started.json",
+        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_latest-started.json",
         "genres": [],
+        "cacheTTL": 40000,
         "manifestData": {
           "id": "anidb_latest-started",
           "type": "anime",
@@ -567,201 +531,22 @@
           "idPrefixes": [
             "kitsu:"
           ]
-        },
-        "displayType": "anime"
+        }
       },
       {
         "id": "custom.org_stremio_animecatalogs.anime.anidb_latest_ended",
         "type": "anime",
-        "name": "AniDB Latest Ended",
+        "name": "Latest Ended AniDB",
         "enabled": true,
         "showInHome": true,
         "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anidb_latest-ended.json",
+        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%7D/catalog/anime/anidb_latest-ended.json",
         "genres": [],
+        "cacheTTL": 40000,
         "manifestData": {
           "id": "anidb_latest-ended",
           "type": "anime",
           "name": "Latest Ended AniDB",
-          "extra": [
-            {
-              "name": "genre",
-              "options": [
-                "Action",
-                "Adventure",
-                "Comedy",
-                "Drama",
-                "Sci-Fi",
-                "Space",
-                "Mystery",
-                "Magic",
-                "Supernatural",
-                "Police",
-                "Fantasy",
-                "Sports",
-                "Romance",
-                "Cars",
-                "Slice of Life",
-                "Racing",
-                "Horror",
-                "Psychological",
-                "Thriller",
-                "Martial Arts",
-                "Super Power",
-                "School",
-                "Ecchi",
-                "Vampire",
-                "Historical",
-                "Military",
-                "Dementia",
-                "Mecha",
-                "Demons",
-                "Samurai",
-                "Harem",
-                "Music",
-                "Parody",
-                "Shoujo Ai",
-                "Game",
-                "Shounen Ai",
-                "Kids",
-                "Hentai",
-                "Yuri",
-                "Yaoi",
-                "Anime Influenced",
-                "Gender Bender",
-                "Doujinshi",
-                "Mahou Shoujo",
-                "Mahou Shounen",
-                "Gore",
-                "Law",
-                "Cooking",
-                "Mature",
-                "Medical",
-                "Political",
-                "Tokusatsu",
-                "Youth",
-                "Workplace",
-                "Crime",
-                "Zombies",
-                "Documentary",
-                "Family",
-                "Food",
-                "Friendship",
-                "Tragedy"
-              ]
-            },
-            {
-              "name": "skip"
-            }
-          ],
-          "idPrefixes": [
-            "kitsu:"
-          ]
-        },
-        "displayType": "anime"
-      },
-      {
-        "id": "custom.org_stremio_animecatalogs.anime.anisearch_popular",
-        "type": "anime",
-        "name": "Popular aniSearch",
-        "enabled": false,
-        "showInHome": false,
-        "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anisearch_popular.json",
-        "genres": [],
-        "manifestData": {
-          "id": "anisearch_popular",
-          "type": "anime",
-          "name": "Popular aniSearch",
-          "extra": [
-            {
-              "name": "genre",
-              "options": [
-                "Action",
-                "Adventure",
-                "Comedy",
-                "Drama",
-                "Sci-Fi",
-                "Space",
-                "Mystery",
-                "Magic",
-                "Supernatural",
-                "Police",
-                "Fantasy",
-                "Sports",
-                "Romance",
-                "Cars",
-                "Slice of Life",
-                "Racing",
-                "Horror",
-                "Psychological",
-                "Thriller",
-                "Martial Arts",
-                "Super Power",
-                "School",
-                "Ecchi",
-                "Vampire",
-                "Historical",
-                "Military",
-                "Dementia",
-                "Mecha",
-                "Demons",
-                "Samurai",
-                "Harem",
-                "Music",
-                "Parody",
-                "Shoujo Ai",
-                "Game",
-                "Shounen Ai",
-                "Kids",
-                "Hentai",
-                "Yuri",
-                "Yaoi",
-                "Anime Influenced",
-                "Gender Bender",
-                "Doujinshi",
-                "Mahou Shoujo",
-                "Mahou Shounen",
-                "Gore",
-                "Law",
-                "Cooking",
-                "Mature",
-                "Medical",
-                "Political",
-                "Tokusatsu",
-                "Youth",
-                "Workplace",
-                "Crime",
-                "Zombies",
-                "Documentary",
-                "Family",
-                "Food",
-                "Friendship",
-                "Tragedy"
-              ]
-            },
-            {
-              "name": "skip"
-            }
-          ],
-          "idPrefixes": [
-            "kitsu:"
-          ]
-        }
-      },
-      {
-        "id": "custom.org_stremio_animecatalogs.anime.anisearch_trending",
-        "type": "anime",
-        "name": "Trending aniSearch",
-        "enabled": false,
-        "showInHome": false,
-        "source": "custom",
-        "sourceUrl": "https://1fe84bc728af-stremio-anime-catalogs.baby-beamup.club/%7B%22cinemeta%22%3A%22on%22%2C%22ratings%22%3A%22on%22%2C%22rpdbkey%22%3A%22t0-free-rpdb%22%2C%22myanimelist_top-all-time%22%3A%22on%22%2C%22myanimelist_top-airing%22%3A%22on%22%2C%22myanimelist_top-series%22%3A%22on%22%2C%22myanimelist_top-movies%22%3A%22on%22%2C%22myanimelist_popular%22%3A%22on%22%2C%22myanimelist_most-favorited%22%3A%22on%22%2C%22anidb_popular%22%3A%22on%22%2C%22anidb_latest-started%22%3A%22on%22%2C%22anidb_latest-ended%22%3A%22on%22%2C%22anilist_trending-now%22%3A%22on%22%2C%22anilist_popular-this-season%22%3A%22on%22%2C%22anisearch_trending%22%3A%22on%22%2C%22anisearch_popular%22%3A%22on%22%7D/catalog/anime/anisearch_trending.json",
-        "genres": [],
-        "manifestData": {
-          "id": "anisearch_trending",
-          "type": "anime",
-          "name": "Trending aniSearch",
           "extra": [
             {
               "name": "genre",
@@ -843,7 +628,7 @@
         "name": "MAL Upcoming Season",
         "type": "anime",
         "source": "mal",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc"
@@ -863,7 +648,7 @@
         "name": "MAL Seasons",
         "type": "anime",
         "source": "mal",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false
       },
       {
@@ -871,7 +656,7 @@
         "name": "MAL Most Favorited",
         "type": "anime",
         "source": "mal",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc",
@@ -882,7 +667,7 @@
         "name": "MAL Most Popular",
         "type": "anime",
         "source": "mal",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc"
@@ -920,30 +705,8 @@
         "displayType": "anime"
       },
       {
-        "id": "mal.80sDecade",
-        "name": "MAL Top 1980s",
-        "type": "anime",
-        "source": "mal",
-        "enabled": true,
-        "showInHome": false,
-        "sort": "default",
-        "order": "asc",
-        "displayType": "anime"
-      },
-      {
-        "id": "mal.90sDecade",
-        "name": "MAL Top 1990s",
-        "type": "anime",
-        "source": "mal",
-        "enabled": true,
-        "showInHome": false,
-        "sort": "default",
-        "order": "asc",
-        "displayType": "anime"
-      },
-      {
-        "id": "mal.00sDecade",
-        "name": "MAL Top 2000s",
+        "id": "mal.20sDecade",
+        "name": "MAL Top 2020s",
         "type": "anime",
         "source": "mal",
         "enabled": true,
@@ -964,8 +727,30 @@
         "displayType": "anime"
       },
       {
-        "id": "mal.20sDecade",
-        "name": "MAL Top 2020s",
+        "id": "mal.00sDecade",
+        "name": "MAL Top 2000s",
+        "type": "anime",
+        "source": "mal",
+        "enabled": true,
+        "showInHome": false,
+        "sort": "default",
+        "order": "asc",
+        "displayType": "anime"
+      },
+      {
+        "id": "mal.90sDecade",
+        "name": "MAL Top 1990s",
+        "type": "anime",
+        "source": "mal",
+        "enabled": true,
+        "showInHome": false,
+        "sort": "default",
+        "order": "asc",
+        "displayType": "anime"
+      },
+      {
+        "id": "mal.80sDecade",
+        "name": "MAL Top 1980s",
         "type": "anime",
         "source": "mal",
         "enabled": true,
@@ -989,7 +774,7 @@
         "name": "MAL By Studio",
         "type": "anime",
         "source": "mal",
-        "enabled": false,
+        "enabled": true,
         "showInHome": false,
         "sort": "default",
         "order": "asc"
@@ -1003,7 +788,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.favorites",
@@ -1014,7 +799,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "tmdb.watchlist",
@@ -1025,7 +810,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "tmdb.watchlist",
@@ -1036,7 +821,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.nfx",
@@ -1047,7 +832,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.nfx",
@@ -1058,7 +843,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.nfk",
@@ -1069,7 +854,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.nfk",
@@ -1080,7 +865,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.hbm",
@@ -1091,7 +876,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.hbm",
@@ -1102,7 +887,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.dnp",
@@ -1113,7 +898,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.dnp",
@@ -1124,7 +909,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.amp",
@@ -1135,7 +920,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.amp",
@@ -1146,7 +931,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.atp",
@@ -1157,7 +942,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.atp",
@@ -1168,7 +953,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.pmp",
@@ -1179,7 +964,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.pmp",
@@ -1190,7 +975,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.pcp",
@@ -1201,7 +986,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.pcp",
@@ -1212,7 +997,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.hlu",
@@ -1223,7 +1008,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.hlu",
@@ -1234,7 +1019,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.cts",
@@ -1245,7 +1030,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.cts",
@@ -1256,7 +1041,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.mgl",
@@ -1267,7 +1052,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.mgl",
@@ -1278,7 +1063,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.cru",
@@ -1289,7 +1074,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.cru",
@@ -1300,7 +1085,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.hay",
@@ -1311,7 +1096,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.hay",
@@ -1322,7 +1107,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.clv",
@@ -1333,7 +1118,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.clv",
@@ -1344,7 +1129,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.gop",
@@ -1355,7 +1140,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.gop",
@@ -1366,7 +1151,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.hst",
@@ -1377,7 +1162,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.hst",
@@ -1388,7 +1173,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.zee",
@@ -1399,7 +1184,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.zee",
@@ -1410,7 +1195,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.nlz",
@@ -1421,7 +1206,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.nlz",
@@ -1432,7 +1217,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.vil",
@@ -1443,7 +1228,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.vil",
@@ -1454,7 +1239,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.sst",
@@ -1465,7 +1250,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.sst",
@@ -1476,7 +1261,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.blv",
@@ -1487,7 +1272,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.blv",
@@ -1498,7 +1283,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.cpd",
@@ -1509,7 +1294,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.cpd",
@@ -1520,7 +1305,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.dpe",
@@ -1531,7 +1316,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.dpe",
@@ -1542,7 +1327,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.bet",
@@ -1553,7 +1338,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.bet",
@@ -1564,7 +1349,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.mub",
@@ -1575,7 +1360,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.mub",
@@ -1586,7 +1371,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "streaming.sta",
@@ -1597,7 +1382,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "streaming.sta",
@@ -1608,137 +1393,7 @@
         "showInHome": false,
         "sort": "default",
         "order": "asc",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.88469",
-        "type": "series",
-        "name": "Trending Anime Shows",
-        "enabled": false,
-        "showInHome": false,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "anime",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.88468",
-        "type": "movie",
-        "name": "Trending Anime Movies",
-        "enabled": false,
-        "showInHome": false,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "anime",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.38489",
-        "type": "series",
-        "name": "Latest Anime Shows",
-        "enabled": false,
-        "showInHome": false,
-        "source": "mdblist",
-        "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "anime",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.38490",
-        "type": "movie",
-        "name": "Latest Anime Movies",
-        "enabled": false,
-        "showInHome": false,
-        "source": "mdblist",
-        "sort": "releasedigital",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "all",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.88434",
-        "type": "series",
-        "name": "Trakt Trending",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.87667",
-        "type": "movie",
-        "name": "Trakt Trending",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.86710",
-        "type": "series",
-        "name": "Latest Airing",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "last_air_date",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.86934",
-        "type": "movie",
-        "name": "Latest Digital Release",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "releasedigital",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.110256",
-        "type": "series",
-        "name": "Today's Top 10",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.110255",
-        "type": "movie",
-        "name": "Today's Top 10",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "series"
       },
       {
         "id": "mdblist.88309",
@@ -1751,7 +1406,7 @@
         "order": "asc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.88307",
@@ -1764,12 +1419,12 @@
         "order": "asc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.86751",
         "type": "series",
-        "name": "Netflix Latest Airing",
+        "name": "Netflix Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1777,7 +1432,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.88328",
@@ -1790,12 +1445,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.86753",
         "type": "series",
-        "name": "Amazon Prime Latest Airing",
+        "name": "Amazon Prime Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1803,7 +1458,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.86755",
@@ -1816,12 +1471,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.88319",
         "type": "series",
-        "name": "Apple+  Latest Airing",
+        "name": "Apple+  Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1829,7 +1484,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.88317",
@@ -1842,12 +1497,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.86758",
         "type": "series",
-        "name": "Disney+  Latest Airing",
+        "name": "Disney+  Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1855,7 +1510,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.86759",
@@ -1868,12 +1523,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.86761",
         "type": "series",
-        "name": "Paramount+ Latest Airing",
+        "name": "Paramount+ Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1881,7 +1536,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.86762",
@@ -1894,12 +1549,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.89649",
         "type": "series",
-        "name": "HBO Max Latest Airing",
+        "name": "HBO Max Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1907,7 +1562,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.89647",
@@ -1920,12 +1575,12 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.88327",
         "type": "series",
-        "name": "Hulu Latest Airing",
+        "name": "Hulu Latest",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
@@ -1933,7 +1588,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.88326",
@@ -1946,33 +1601,33 @@
         "order": "asc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91213",
         "type": "series",
         "name": "Action",
-        "enabled": true,
+        "enabled": false,
         "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91211",
         "type": "movie",
         "name": "Action",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "asc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.116038",
@@ -1985,7 +1640,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.116037",
@@ -1998,124 +1653,124 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91224",
         "type": "series",
         "name": "Comedy",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91223",
         "type": "movie",
         "name": "Comedy",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.3126",
         "type": "series",
         "name": "Crime",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.3108",
         "type": "movie",
         "name": "Crime",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91297",
         "type": "series",
         "name": "Drama",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91296",
         "type": "movie",
         "name": "Drama",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.8043",
         "type": "movie",
         "name": "History & War",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91217",
         "type": "series",
         "name": "Horror",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91215",
         "type": "movie",
         "name": "Horror",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.102554",
@@ -2128,7 +1783,7 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.3892",
@@ -2141,59 +1796,59 @@
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91221",
         "type": "series",
         "name": "Sci-Fi",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91220",
         "type": "movie",
         "name": "Sci-Fi",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.91894",
         "type": "series",
         "name": "Thriller",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "last_air_date",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.91893",
         "type": "movie",
         "name": "Thriller",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
         "sort": "released",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.84677",
@@ -2202,11 +1857,11 @@
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "imdbpopular",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.84403",
@@ -2215,37 +1870,11 @@
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "imdbpopular",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
-      },
-      {
-        "id": "mdblist.83497",
-        "type": "movie",
-        "name": "Top Standup Comedy",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.84401",
-        "type": "series",
-        "name": "Top Reality TV",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
         "id": "mdblist.84487",
@@ -2254,115 +1883,115 @@
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "imdbpopular",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
-        "id": "mdblist.101882",
+        "id": "mdblist.84401",
         "type": "series",
-        "name": "IMDb Top 250",
+        "name": "Top Reality TV",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "default",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Series"
+        "displayType": "series"
       },
       {
-        "id": "mdblist.101881",
+        "id": "mdblist.83497",
         "type": "movie",
-        "name": "IMDb Top 250",
+        "name": "Top Standup Comedy",
         "enabled": true,
         "showInHome": true,
         "source": "mdblist",
-        "sort": "default",
-        "order": "asc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.91301",
-        "type": "movie",
-        "name": "Top 1980s",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.91300",
-        "type": "movie",
-        "name": "Top 1990s",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.91302",
-        "type": "movie",
-        "name": "Top 2000s",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.91303",
-        "type": "movie",
-        "name": "Top 2010s",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
-      },
-      {
-        "id": "mdblist.91304",
-        "type": "movie",
-        "name": "Top 2020s",
-        "enabled": true,
-        "showInHome": true,
-        "source": "mdblist",
-        "sort": "imdbpopular",
-        "order": "desc",
-        "cacheTTL": 40000,
-        "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
       },
       {
         "id": "mdblist.92337",
         "type": "movie",
         "name": "Top 2025",
-        "enabled": true,
-        "showInHome": true,
+        "enabled": false,
+        "showInHome": false,
         "source": "mdblist",
-        "sort": "imdbpopular",
+        "sort": "random",
         "order": "desc",
         "cacheTTL": 40000,
         "genreSelection": "standard",
-        "displayType": "Movie"
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.91304",
+        "type": "movie",
+        "name": "Top 2020s",
+        "enabled": false,
+        "showInHome": false,
+        "source": "mdblist",
+        "sort": "random",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.91303",
+        "type": "movie",
+        "name": "Top 2010s",
+        "enabled": false,
+        "showInHome": false,
+        "source": "mdblist",
+        "sort": "random",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.91302",
+        "type": "movie",
+        "name": "Top 2000s",
+        "enabled": false,
+        "showInHome": false,
+        "source": "mdblist",
+        "sort": "random",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.91300",
+        "type": "movie",
+        "name": "Top 1990s",
+        "enabled": false,
+        "showInHome": false,
+        "source": "mdblist",
+        "sort": "random",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
+      },
+      {
+        "id": "mdblist.91301",
+        "type": "movie",
+        "name": "Top 1980s",
+        "enabled": false,
+        "showInHome": false,
+        "source": "mdblist",
+        "sort": "random",
+        "order": "desc",
+        "cacheTTL": 40000,
+        "genreSelection": "standard",
+        "displayType": "movie"
       }
     ],
     "search": {
@@ -2384,16 +2013,16 @@
       }
     },
     "streaming": [],
-    "lastModified": 1760581247287,
-    "configVersion": 1760581247288,
+    "lastModified": 1761859948604,
+    "configVersion": 1761859948604,
     "displayTypeOverrides": {
-      "movie": "Movie",
-      "series": "Series"
+      "movie": "movie",
+      "series": "series"
     }
   },
   "metadata": {
     "apiKeysExcluded": true,
-    "totalCatalogs": 150,
-    "enabledCatalogs": 80
+    "totalCatalogs": 139,
+    "enabledCatalogs": 61
   }
 }
