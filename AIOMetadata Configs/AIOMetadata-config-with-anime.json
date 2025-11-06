@@ -1,6 +1,6 @@
 {
-  "version": "1.5.0",
-  "exportedAt": "2025-10-30T21:43:19.982Z",
+  "version": "1.7.2",
+  "exportedAt": "2025-11-06T21:11:59.593Z",
   "config": {
     "language": "en-US",
     "includeAdult": false,
@@ -2000,8 +2000,8 @@
       "providers": {
         "movie": "tmdb.search",
         "series": "tvdb.search",
-        "anime_movie": "mal.search.movie",
-        "anime_series": "mal.search.series"
+        "anime_movie": "kitsu.search.movie",
+        "anime_series": "kitsu.search.series"
       },
       "engineEnabled": {
         "tmdb.search": true,
@@ -2013,8 +2013,8 @@
       }
     },
     "streaming": [],
-    "lastModified": 1761859948604,
-    "configVersion": 1761859948604,
+    "lastModified": 1761860591978,
+    "configVersion": 1761860591979,
     "displayTypeOverrides": {
       "movie": "movie",
       "series": "series"

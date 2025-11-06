@@ -1,6 +1,6 @@
 {
-  "version": "1.5.0",
-  "exportedAt": "2025-10-30T21:22:21.630Z",
+  "version": "1.7.2",
+  "exportedAt": "2025-11-06T21:09:38.136Z",
   "config": {
     "language": "en-US",
     "includeAdult": false,
@@ -119,7 +119,8 @@
         "showInHome": true,
         "sort": "default",
         "order": "asc",
-        "displayType": "series"
+        "displayType": "series",
+        "enableRPDB": true
       },
       {
         "id": "tmdb.trending",
@@ -858,8 +859,8 @@
       "providers": {
         "movie": "tmdb.search",
         "series": "tvdb.search",
-        "anime_movie": "mal.search.movie",
-        "anime_series": "mal.search.series"
+        "anime_movie": "kitsu.search.movie",
+        "anime_series": "kitsu.search.series"
       },
       "engineEnabled": {
         "tmdb.search": true,
@@ -867,14 +868,16 @@
         "tvdb.collections.search": true,
         "tvmaze.search": true,
         "mal.search.movie": false,
-        "mal.search.series": false
+        "mal.search.series": false,
+        "kitsu.search.series": false,
+        "kitsu.search.movie": false
       }
     },
     "streaming": [
       "cru"
     ],
-    "lastModified": 1761530918544,
-    "configVersion": 1761530918545,
+    "lastModified": 1761861248317,
+    "configVersion": 1761861248318,
     "displayTypeOverrides": {
       "movie": "movie",
       "series": "series"
