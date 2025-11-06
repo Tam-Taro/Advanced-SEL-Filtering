@@ -35,7 +35,7 @@ https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/
 8. Load Template, Save your AIOStreams and enjoy!
 
   > [!NOTE]
-  > Remember to personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists as they may contain streams of your preferred languages. You should also select your subtitle languages in SubHero addon - by default only English is selected. 
+  > Remember to personalize your imported config by going to `Filters` -> `Language`. Select all the languages you may be watching on Stremio as `Required Languages`. Then copy those same ones into `Preferred Languages`, then sort/rank at the bottom according to your preference. **Keep `Dubbed, Dual Audio, Multi, Unknown` in these two lists** as they may contain streams of your preferred languages. You should also select your subtitle languages in SubHero addon - by default only English is selected. 
 
 ## 🧩 Recommended Setup
 This is my recommended setup that should work for most of you. If you just want a finished template, then import & use one of the templates described above. Otherwise read on to customize your current AIOStreams instance.
@@ -158,7 +158,7 @@ These are setup configs to use with AIOMetadata. It is a powerful tool for all t
 | Complete config | Description |Download|
 |-----------|--------------|---|
 | **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs. Huge props to Cedya, Snoak & Mr Professor for their awesome lists!|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-with-anime.json)|
-| **Without Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-without-anime.json)|
+| **Without Anime Catalogs** | Complete configuration for tv and movies catalogs. No anime. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-without-anime.json)|
 
 ## 📦 How to Import
 AIOMetadata setup configuration [For Meta/Catalogs]
@@ -170,3 +170,4 @@ AIOMetadata setup configuration [For Meta/Catalogs]
    3. Configuration tab -> Save Configuration -> Enter a password to save your configuration (if you haven't made an account before) -> Install the addon directly into Stremio. Note: if you encounter `AddonsPushedToAPI - Max descriptor size reached` error, try step
    4. Copy your `Install URL`. Go to [Stremthru Side Kick](https://stremthru.13377001.xyz/stremio/sidekick/), log in there using your stremio account and use the Install button there to install the addon with the AIOMetadata URL. This *may help to* bypass the `AddonsPushedToAPI - Max descriptor size reached` error, otherwise disable some catalogs to reduce size. 
 - For best compatibility with AIOMetadata, go to https://cinebye.dinsden.top, load up your account and remove all three Cinemeta features (Search, Catalogs, and Meta). Then scroll down to the bottom of cinebye and re-order your addons so that AIOMetadata is top spot.  Finally, save the changes by clicking `Sync to Stremio`.
+- You can change your default Display Language inside AIOMetadata under General tab. Note that if you notice tv series not displaying any episode information in your language, try to upload the episodes overview for your show via tvdb directly. Alternatively you can switch the metadata provider to TMDB as it has more language support.
