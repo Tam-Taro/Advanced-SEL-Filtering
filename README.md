@@ -59,12 +59,11 @@ This is my recommended setup that should work for most of you. If you just want 
   - This is important for our Sort Order to work.
 > [!NOTE]
 > You will have to edit this section to your personal preference.
-  - Under `Language`
-  - `Required Language`, select all your required languages there. This is ensure streams of the language you watch will be included in the results.
+  - Under `Language` -> `Required Language`, select all your required languages there. This is ensure streams of the language you watch will be included in the results.
   - Set `Preferred Languages` to be the same as your `Required Languages`, reorder/rank them to your preferrence. 
   - By default my setup has the following languages: `English, Japanese, Korean, Dubbed, Dual Audio, Multi, Unknown`. Regardless of your choice, do not remove `Dubbed, Dual Audio, Multi, Unknown` from either lists, as some streams of your language may fall under these language tags.
 
-- Default is recommended in the rest of the filters. If not sure, check my AIOStreams json for how I configured them 
+- Default is recommended in the rest of the filters. If not sure, check my AIOStreams template json for how I configured them 
   - `Quality`: Remove default items in `Excluded` since my SEL will remove CAM/TS/etc when necessary
   - `Visual Tag`:  If your device doesn't support DV add `DV Only` into `Excluded`. Same for 3D. 
   -   `Encode`: `Exclude H-OU, H-SBS` for non 3DTV
@@ -81,7 +80,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
 
 ## **Filtering with Stream Expression Language (SEL)**
 
-- All filtering (besides title match and dedupe) can be done with stream expressions
+- All filtering (besides title match and dedupe) can be done with stream expressions. My setup leaves the language filtering to AIOStreams basic language filter (altho can be done using SEL - just think the basic filter is good enough).
 - There are two schools of thought with regards to SEL Filtering:
   - using it to filter during fetching stage via `Dynamic Group Exit Condition` or,
   - using it after all initial filtering has been done by AIOStreams via  `Excluded Stream Expressions` (ESE) 
