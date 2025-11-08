@@ -20,7 +20,7 @@ These are setup templates to use with AIOStreams. If you're not sure which AIOSt
 
 ---
 
-## 📦 How to Import
+## 📥 How to Import
 
 1. **AIOStreams → Save & Install 💾 → Import** 
 2. Click **Import Template**
@@ -54,7 +54,7 @@ This is my recommended setup that should work for most of you. If you just want 
 > [!NOTE]
 > If your first filter in `Global Sort Order` is `Cached` and you left `Cached/Uncached Sort Order` blank, your sort/filter may not work properly.
 
-## **Filtering**
+## 🎚️ Filtering
 - Define `Preferrence Order` in each of `Resolution, Quality, Encode, Stream Type, Visual Tag, Audio Tag` and `Language`. 
   - This is important for our Sort Order to work.
 > [!NOTE]
@@ -78,7 +78,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
 > [!IMPORTANT]
 > Leave all remainder filters setting, `Excluded` `Included` and `Required` boxes empty. As tempting as it sounds to select `Exclude Uncached` or set your `Result Limits`, my SEL will do that for you. This is the first troubleshooting step if your sort/filter looks off!
 
-## **Filtering with Stream Expression Language (SEL)**
+## 🎚️🤖 Filtering with Stream Expression Language (SEL)
 
 - All filtering (besides title match and dedupe) can be done with stream expressions. My setup leaves the language filtering to AIOStreams basic language filter (altho can be done using SEL - just think the basic filter is good enough).
 - There are two schools of thought with regards to SEL Filtering:
@@ -159,7 +159,7 @@ These are setup configs to use with AIOMetadata. It is a powerful tool for all t
 | **With Anime Catalogs** | Complete configuration with anime metadata preset, tv, movies and anime catalogs. Huge props to Cedya, Snoak & Mr Professor for their awesome lists!|[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-with-anime.json)|
 | **Without Anime Catalogs** | Complete configuration for tv and movies catalogs. No anime. |[Direct Link](https://raw.githubusercontent.com/Tam-Taro/SEL-Filtering-and-Sorting/refs/heads/main/AIOMetadata%20Configs/AIOMetadata-config-without-anime.json)|
 
-## 📦 How to Import
+## 📥 How to Import
 AIOMetadata setup configuration [For Meta/Catalogs]
 
 - Pick one of these two json files to import into AIOMetadata following the instructions below:
