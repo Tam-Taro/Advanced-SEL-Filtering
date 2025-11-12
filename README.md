@@ -157,7 +157,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
     </details>
   </p>
 
-The first block of SEL for your `Excluded Stream Expressions` (ESE) is the Uncached Filter. It checks and removes uncached debrid streams with low resolution and low seeder count, except for good regex-matched. It also removes P2P streams if present for low seeder count. Usenet results are exempt for this Uncached Filter.
+The first block of SEL for your `Excluded Stream Expressions` (ESE) is the Uncached Filter. It checks and removes uncached debrid streams with low resolution and low seeder count, except for good regex-matched. It also removes P2P streams if present for low seeder count. Usenet results are exempt from this Uncached Filter.
 
 The second block of ESE is the Main Quality/Resolution Filter. It uses `slice(...,3)` to further trim streams, keeping top ~3 results of most `Quality` and `Resolution` combination. Because AIOStreams sorts streams before SEL filtering, you can determine how your streams is sorted first so that the `slice` of the top results of any `quality` /`resolution` will always select your preferred "highest-quality streams". For me, that would be Vidhin's regex-matched streams, so I put `Regex Pattern` right underneath `Quality` in Sort Order. If you value size or language for every resolution + quality pair then put `Size` or `Language` right underneath `Quality`, the `slice` will then keep your top 3 streams for that particular `quality`/`resolution` according to your size or language preference, respectively.
 
