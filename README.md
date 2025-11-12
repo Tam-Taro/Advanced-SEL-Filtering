@@ -1,7 +1,14 @@
 # SEL-Filtering-and-Sorting
-Since AIOStreams rewrite, I've been an avid tinkerer, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at  AIOStream discord. Now I will use this space to share some of those tips for your own setup. You will find a guide to my personal config and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle. 
+Since beta of the current v2 AIOStreams, I always wanted the perfect config that would show only the best results, not just for myself, but for my family and friends too. Some prefer lower quality/resolution streams for their lower end TV, while I prefer the latest remuxes. An all-in-one config that I could share. We didn't want to see dozens of results we would never use anyway. This balancing act was finally possible with the release of [Stream Expressions Language (SEL)](https://github.com/Viren070/AIOStreams/wiki/Stream-Expression-Language) capability in AIOStreams.  
 
-You can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
+After months of tinkering, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at the AIOStream discord, I will use this space to share some of that with you. You will find a guide to my personal config that I'm happy with and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle.
+
+Consider using my setup template as is if you:
+- Don't want to see too many results, but also don't want to miss out on any high quality streams that may be removed by simple filtering like `Exclude Uncached` or `Result Limits`
+- Want a config that will adjust its filtering strictness based on how many results are found. Dont want those old 480p cartoons filtered out? But don't want to see 720p streams when there are a bunch of 1080p & 4K present already? This setup got you covered. 
+- Prioritize certain streams and have sorted your results accordingly in `Filters` and `Sort Order` (Cached & Uncached), optionally with [Vidhin's regex patterns](https://github.com/Vidhin05/Releases-Regex/blob/main/README.md)
+
+Lastly, you can find my config for AIOMetadata at the end for all your metadata and catalog  management needs.
 
 ---
 
