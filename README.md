@@ -1,7 +1,7 @@
 # SEL-Filtering-and-Sorting
-Since beta of the current v2 AIOStreams, I always wanted the perfect config that would show only the best results, not just for myself, but for my family and friends too. Some prefer lower quality/resolution streams for their lower end TV, while I prefer the latest remuxes. An all-in-one config that I could share. We didn't want to see dozens of results we would never use anyway. This balancing act was finally possible with the release of [Stream Expressions Language (SEL)](https://github.com/Viren070/AIOStreams/wiki/Stream-Expression-Language) capability in AIOStreams.  
+  Since beta of the current v2 AIOStreams, I always wanted the perfect config that would show only the best results, not just for myself, but for my family and friends too. Some prefer lower quality/resolution streams for their lower end TV, while I prefer the latest remuxes. An all-in-one config that I could share. We didn't want to see dozens of results we would never use anyway. This balancing act was finally possible with the release of [Stream Expressions Language (SEL)](https://github.com/Viren070/AIOStreams/wiki/Stream-Expression-Language) capability in AIOStreams.  
 
-After months of tinkering, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at the AIOStream discord, I will use this space to share some of that with you. You will find a guide to my personal config that I'm happy with and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle.
+  After months of tinkering, always finetuning my setup, testing newest features and bugs, and exchanging numerous tips with you all over at the AIOStream discord, I will use this space to share some of that with you. You will find a guide to my personal config that I'm happy with and importable templates for AIOStreams, with a heavy focus on SEL as the filtering tool. It is tailored to my preference, but has broadened over time so that most of you should find it as a good starting point, if not the final piece to your stremio puzzle.
 
 Consider using my setup template as is if you:
 - Don't want to see too many results, but also don't want to miss out on any high quality streams that may be removed by simple filtering like `Exclude Uncached` or `Result Limits`
@@ -95,7 +95,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
 - My setup has been fine-tuned using the second method for over 3 months now with feedback from users. I may incorporate the first method into my setup in the future, however for now heavy work of filtering is done using my three lines of ESE. Copy-paste the codes below into `AIOStreams -> Excluded Stream Expressions` or import them using the SEL-only template json at the top of this page.
   <p>
     <details>
-        <summary>First line into ESE: Core Filters & Low-res fallback</summary>
+        <summary>First line into ESE: Uncached Filter</summary>
   
     ```text
   /*Uncached low-seeder filter (except usenet or good regex-matched uncached)*/
@@ -113,7 +113,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
   </p>
   <p>
     <details>
-        <summary>Second line into ESE: Trimming high quality streams (Bluray REMUX, Bluray, WEB-DL)</summary>
+        <summary>Second line into ESE: Main Quality/Resolution Filter</summary>
   
     ```text
   /*High quality & resolution filter*/
@@ -141,7 +141,7 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
   </p>
   <p>
     <details>
-        <summary>Third line into ESE: Trimming low quality streams</summary>
+        <summary>Third line into ESE: Low Quality/Resolution Filter</summary>
   
     ```text
   /*Low quality, resoution & "Bad" regex filter*/
@@ -156,6 +156,12 @@ https://raw.githubusercontent.com/Vidhin05/Releases-Regex/main/merged-anime-rege
     ```
     </details>
   </p>
+
+The first block of SEL for your `Excluded Stream Expressions` (ESE) is the Uncached Filter. It checks and removes uncached debrid streams with low resolution and low seeder count, except for good regex-matched. It also removes P2P streams if present for low seeder count. Usenet results are exempt for this Uncached Filter.
+
+The second block of ESE is the Main Quality/Resolution Filter. It uses `slice(...,3)` to further trim streams, keeping top ~3 results of most `Quality` and `Resolution` combination. Because AIOStreams sorts streams before SEL filtering, you can determine how your streams is sorted first so that the `slice` of the top results of any `quality` /`resolution` will always select your preferred "highest-quality streams". For me, that would be Vidhin's regex-matched streams, so I put `Regex Pattern` right underneath `Quality` in Sort Order. If you value size or language for every resolution + quality pair then put `Size` or `Language` right underneath `Quality`, the `slice` will then keep your top 3 streams for that particular `quality`/`resolution` according to your size or language preference, respectively.
+
+Third block of ESE is the Low Quality/Resolution Filter. It removes low quality and low resolution streams when there are already enough present. It also removes regex-matched streams from "Bad" quality release groups when there are enough non-"Bad" streams present (for those that use Vidhin's regex).
 
 ---
 
